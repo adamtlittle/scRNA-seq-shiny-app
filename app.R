@@ -19,7 +19,7 @@ ui <- fluidPage(
 # Server
 
 server <- function(input, output, session){
- 
+  source("server-fixed-data.R",local = TRUE)
 }
 
 # Shiny App Object
