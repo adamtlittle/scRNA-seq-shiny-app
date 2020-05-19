@@ -1,4 +1,4 @@
-tabPanel("Fixed Data",
+tabPanel("Clustering",
 
   titlePanel("Inputs"),
 
@@ -10,7 +10,7 @@ tabPanel("Fixed Data",
   
     # Main Panel
     mainPanel(
-        "Show Cluster Plot"
+      "Dimension Plots"
     )
   
   ) # end sidebarLayout

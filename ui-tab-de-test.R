@@ -1,4 +1,4 @@
-tabPanel("Fixed Data",
+tabPanel("DE Tests",
 
   titlePanel("Inputs"),
 
@@ -9,9 +9,7 @@ tabPanel("Fixed Data",
     sidebarPanel(),
   
     # Main Panel
-    mainPanel(
-        "Show Cluster Plot"
-    )
+    mainPanel("Differential Expression Tests")
   
   ) # end sidebarLayout
 ) # end tabpanel
