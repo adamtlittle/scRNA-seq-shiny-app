@@ -1,6 +1,6 @@
 tabPanel("DE Tests",
 
-  titlePanel("Inputs"),
+  titlePanel("Differential Expression Tests"),
 
   # Organize Components into Panels
   sidebarLayout(
@@ -9,7 +9,9 @@ tabPanel("DE Tests",
     sidebarPanel(),
   
     # Main Panel
-    mainPanel("Differential Expression Tests")
+    mainPanel(
+      tableOutput('detable')
+    )
   
   ) # end sidebarLayout
 ) # end tabpanel
