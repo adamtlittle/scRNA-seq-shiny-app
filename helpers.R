@@ -3,8 +3,6 @@ library(Seurat)
 library(SeuratData)
 library(tidyverse)
 library(shinythemes)
+library(tidyverse)
 
-
-# Read in analyzed data
-pbmc <- readRDS(file="pbmc.rds")
-markers <- FindMarkers(pbmc, ident.1 = "CD14+ Mono", ident.2 = "FCGR3A+ Mono")
+pbmc <- readRDS(file = "pbmc.rds")

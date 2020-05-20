@@ -1,5 +1,6 @@
 source("helpers.R")
 # User Interface
+pbmc <- readRDS('pbmc.rds')
 
 ui <- fluidPage(
   navbarPage(

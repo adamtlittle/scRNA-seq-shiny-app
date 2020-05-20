@@ -1,6 +1,6 @@
-tabPanel("Clustering",
+tabPanel("Feature Plots",
 
-  titlePanel("Inputs"),
+  titlePanel("Feature Plots"),
 
   # Organize Components into Panels
   sidebarLayout(
@@ -10,7 +10,7 @@ tabPanel("Clustering",
   
     # Main Panel
     mainPanel(
-      "Dimension Plots"
+      plotOutput('featureplot1')
     )
   
   ) # end sidebarLayout
