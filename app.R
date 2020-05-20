@@ -2,18 +2,23 @@ source("helpers.R")
 # User Interface
 pbmc <- readRDS('pbmc.rds')
 
+
+## =========================================================================== ##
+## User Interface
+## =========================================================================== ##
+
 ui <- fluidPage(
   navbarPage(
     title="scRNA-seq",
     theme=shinytheme("cerulean"),
+    ## =========================================================================== ##
+    ## Homepage
+    ## =========================================================================== ##
     source("ui-index.R",local=TRUE)$value,
     ## =========================================================================== ##
-    ## DOWNLOAD DATA TABS
+    ## Visualization Tabs
     ## =========================================================================== ##
     source("ui-tab-fixed-data.R",local=TRUE)$value,
-    ## =========================================================================== ##
-    ## Visualization TABS
-    ## =========================================================================== ##
     source("ui-tab-de-test.R",local=TRUE)$value,
     source("ui-tab-clustering.R",local=TRUE)$value,
     source("ui-tab-heat-maps.R",local=TRUE)$value,
@@ -21,7 +26,10 @@ ui <- fluidPage(
   )
 )
 
-# Server
+
+## =========================================================================== ##
+## Server
+## =========================================================================== ##
 
 server <- function(input, output, session){
   source("server-fixed-data.R",local = TRUE)
@@ -31,5 +39,7 @@ server <- function(input, output, session){
   source("server-violin-plots.R",local=TRUE)
 }
 
-# Shiny App Object
+## =========================================================================== ##
+## Shiny App Object
+## =========================================================================== ##
 shinyApp(ui = ui, server = server)

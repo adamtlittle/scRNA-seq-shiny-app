@@ -1,6 +1,6 @@
-tabPanel("Fixed Data",
+tabPanel("Dimension Plot",
 
-  titlePanel("Inputs"),
+  titlePanel("Dimension Plot"),
 
   # Organize Components into Panels
   sidebarLayout(
@@ -10,7 +10,7 @@ tabPanel("Fixed Data",
   
     # Main Panel
     mainPanel(
-        "Show Cluster Plot"
+        plotOutput('dimplot1')
     )
   
   ) # end sidebarLayout
