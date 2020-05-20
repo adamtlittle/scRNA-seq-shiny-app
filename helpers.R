@@ -4,5 +4,3 @@ library(SeuratData)
 library(tidyverse)
 library(shinythemes)
 library(tidyverse)
-
-pbmc <- readRDS(file = "pbmc.rds")
