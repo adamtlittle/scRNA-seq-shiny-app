@@ -10,7 +10,7 @@ tabPanel("Heat Maps",
   
     # Main Panel
     mainPanel(
-      "Heat Maps"
+      plotOutput('heatmap')
     )
   
   ) # end sidebarLayout

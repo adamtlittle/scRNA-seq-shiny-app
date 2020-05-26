@@ -1,4 +1,4 @@
-tabPanel("Violin Plots",
+tabPanel("Heat Maps",
 
   titlePanel("Inputs"),
 
@@ -10,7 +10,7 @@ tabPanel("Violin Plots",
   
     # Main Panel
     mainPanel(
-      plotOutput('violinplot')
+      plotOutput('dotplot')
     )
   
   ) # end sidebarLayout

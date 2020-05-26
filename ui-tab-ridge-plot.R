@@ -1,6 +1,6 @@
-tabPanel("Violin Plots",
+tabPanel("Feature Plots",
 
-  titlePanel("Inputs"),
+  titlePanel("Ridge Plots"),
 
   # Organize Components into Panels
   sidebarLayout(
@@ -10,7 +10,7 @@ tabPanel("Violin Plots",
   
     # Main Panel
     mainPanel(
-      plotOutput('violinplot')
+      plotOutput('ridgeplot')
     )
   
   ) # end sidebarLayout
