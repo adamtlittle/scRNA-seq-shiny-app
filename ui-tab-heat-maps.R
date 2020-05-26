@@ -6,7 +6,13 @@ tabPanel("Heat Maps",
   sidebarLayout(
   
    # Left Side Panel
-    sidebarPanel(),
+    sidebarPanel(
+      selectInput("select_gene3",
+                  label="RNA-Seq Gene Name",
+                  choices = rownames(pbmc),
+                  multiple = TRUE
+      ),
+    ),
   
     # Main Panel
     mainPanel(

@@ -6,7 +6,13 @@ tabPanel("Feature Plots",
   sidebarLayout(
   
    # Left Side Panel
-    sidebarPanel(),
+    sidebarPanel(
+      selectInput("select_gene2",
+                  label="RNA-Seq Gene Name",
+                  choices = rownames(pbmc),
+                  multiple = TRUE
+                  ),
+    ),
   
     # Main Panel
     mainPanel(

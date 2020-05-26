@@ -1,3 +1,3 @@
   output$featureplot1 <- renderPlot({
-    FeaturePlot(pbmc, features = features)
+    FeaturePlot(pbmc, features = input$select_gene2)
   })

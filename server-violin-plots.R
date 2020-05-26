@@ -1,3 +1,3 @@
 output$violinplot <- renderPlot({
-  VlnPlot(pbmc, features = 'LYZ')
+  VlnPlot(pbmc, features = input$select_gene4)
 })
