@@ -1,3 +1,3 @@
 output$dotplot <- renderPlot({
-  DotPlot(pbmc, features = features) + RotatedAxis()
+  DotPlot(pbmc, features = input$select_gene_dot) + RotatedAxis()
 })

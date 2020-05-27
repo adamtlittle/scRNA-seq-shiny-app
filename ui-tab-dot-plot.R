@@ -1,13 +1,18 @@
-tabPanel("Heat Maps",
+tabPanel("Dot Plots",
 
-  titlePanel("Inputs"),
+  titlePanel("Dot Plots"),
 
   # Organize Components into Panels
   sidebarLayout(
   
    # Left Side Panel
-    sidebarPanel(),
-  
+    sidebarPanel(
+      selectInput("select_gene_dot",
+                  label="RNA-Seq Gene Name",
+                  choices = rownames(pbmc),
+                  multiple = TRUE
+      ),
+    ),
     # Main Panel
     mainPanel(
       plotOutput('dotplot')

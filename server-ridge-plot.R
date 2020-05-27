@@ -1,3 +1,3 @@
 output$ridgeplot <- renderPlot({
-  RidgePlot(pbmc, features = 'LYZ')
+  RidgePlot(pbmc, features = input$select_gene_ridge)
 })

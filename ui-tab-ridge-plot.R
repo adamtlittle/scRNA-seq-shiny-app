@@ -1,4 +1,4 @@
-tabPanel("Feature Plots",
+tabPanel("Ridge Plots",
 
   titlePanel("Ridge Plots"),
 
@@ -6,7 +6,13 @@ tabPanel("Feature Plots",
   sidebarLayout(
   
    # Left Side Panel
-    sidebarPanel(),
+    sidebarPanel(
+      selectInput("select_gene_ridge",
+                  label="RNA-Seq Gene Name",
+                  choices = rownames(pbmc),
+                  multiple = TRUE
+      ),
+    ),
   
     # Main Panel
     mainPanel(
