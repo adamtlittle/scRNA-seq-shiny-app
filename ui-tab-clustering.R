@@ -11,7 +11,13 @@ tabPanel("Feature Plots",
                   label="RNA-Seq Gene Name",
                   choices = rownames(pbmc),
                   multiple = FALSE
-                  ),
+        ) %>% 
+        shinyInput_label_embed(
+          shiny_iconlink() %>%
+            bs_embed_popover(
+              title = "Letter", content = "Choose a favorite", placement = "left"
+            )
+        ), # end selectInput
     ),
   
     # Main Panel

@@ -12,7 +12,13 @@ tabPanel("Heat Maps",
                   choices = rownames(pbmc),
                   multiple = TRUE,
                   selected = features
-      ),
+      ) %>% 
+        shinyInput_label_embed(
+          shiny_iconlink() %>%
+            bs_embed_popover(
+              title = "Letter", content = "Choose a favorite", placement = "left"
+            )
+        ), # end selectInput
     ),
   
     # Main Panel
