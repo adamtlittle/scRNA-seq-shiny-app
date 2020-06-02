@@ -10,13 +10,15 @@ tabPanel("Violin Plots",
       selectInput("select_gene4",
                   label="RNA-Seq Gene Name",
                   choices = rownames(pbmc),
-                  multiple = TRUE
+                  multiple = FALSE,
+                  selected = "LYZ"
       ),
     ),
   
     # Main Panel
     mainPanel(
-      plotOutput('violinplot')
+      plotOutput('violinplot'),
+      width = main_width
     )
   
   ) # end sidebarLayout

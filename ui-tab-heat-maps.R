@@ -10,13 +10,15 @@ tabPanel("Heat Maps",
       selectInput("select_gene3",
                   label="RNA-Seq Gene Name",
                   choices = rownames(pbmc),
-                  multiple = TRUE
+                  multiple = TRUE,
+                  selected = features
       ),
     ),
   
     # Main Panel
     mainPanel(
-      plotOutput('heatmap')
+      plotOutput('heatmap'),
+      width = main_width
     )
   
   ) # end sidebarLayout

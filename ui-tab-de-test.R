@@ -30,7 +30,8 @@ tabPanel("DE Tests",
     ),
     # Main Panel
     mainPanel(
-      tableOutput('detable')
+      tableOutput('detable'),
+      width = main_width
     )
   
   ) # end sidebarLayout

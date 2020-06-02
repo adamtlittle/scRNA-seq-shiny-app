@@ -10,12 +10,14 @@ tabPanel("Dot Plots",
       selectInput("select_gene_dot",
                   label="RNA-Seq Gene Name",
                   choices = rownames(pbmc),
-                  multiple = TRUE
+                  multiple = TRUE,
+                  selected = features,
       ),
     ),
     # Main Panel
     mainPanel(
-      plotOutput('dotplot')
+      plotOutput('dotplot'),
+      width = main_width
     )
   
   ) # end sidebarLayout

@@ -10,13 +10,14 @@ tabPanel("Feature Plots",
       selectInput("select_gene2",
                   label="RNA-Seq Gene Name",
                   choices = rownames(pbmc),
-                  multiple = TRUE
+                  multiple = FALSE
                   ),
     ),
   
     # Main Panel
     mainPanel(
-      plotOutput('featureplot1')
+      plotOutput('featureplot1'),
+      width = main_width
     )
   
   ) # end sidebarLayout

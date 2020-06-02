@@ -10,13 +10,15 @@ tabPanel("Ridge Plots",
       selectInput("select_gene_ridge",
                   label="RNA-Seq Gene Name",
                   choices = rownames(pbmc),
-                  multiple = TRUE
+                  multiple = FALSE,
+                  selected="LYZ",
       ),
     ),
   
     # Main Panel
     mainPanel(
-      plotOutput('ridgeplot')
+      plotOutput('ridgeplot'),
+      width = main_width
     )
   
   ) # end sidebarLayout

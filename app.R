@@ -1,6 +1,8 @@
 source("helpers.R")
 # User Interface
 pbmc <- readRDS('pbmc.rds')
+features <- c("LYZ", "CCL5", "IL32", "PTPRCAP", "FCGR3A", "PF4")
+main_width <- 6
 
 ## =========================================================================== ##
 ## User Interface

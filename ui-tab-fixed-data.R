@@ -10,7 +10,8 @@ tabPanel("Dimension Plot",
   
     # Main Panel
     mainPanel(
-        plotOutput('dimplot1')
+        plotOutput('dimplot1'),
+        width = main_width
     )
   
   ) # end sidebarLayout
