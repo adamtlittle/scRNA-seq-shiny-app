@@ -10,7 +10,7 @@ tabPanel("Dimension Plot",
   
     # Main Panel
     mainPanel(
-        plotOutput('dimplot1'),
+        plotlyOutput('dimplot1'),
         width = main_width
     )
   

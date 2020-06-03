@@ -6,11 +6,10 @@
   
   pbmc <- RenameIdents(pbmc, new.cluster.ids)
   
-  output$dimplot1 <- renderPlot({
+  output$dimplot1 <- renderPlotly({
     dimplot <- DimPlot(pbmc, reduction = "umap", label = TRUE, pt.size = 0.5) + NoLegend()
     # select.cells <- 
-    # CellSelector(plot = dimplot)
-    dimplot
+    CellSelector(plot = dimplot)
     #Idents(pbmc, cells = select.cells) <- "NewCells"
     #newcells.markers <- FindMarkers(pbmc, ident.1 = "NewCells", ident.2 = "CD14+ Mono", min.diff.pct = 0.3, only.pos = TRUE)
     # head(newcells.markers)

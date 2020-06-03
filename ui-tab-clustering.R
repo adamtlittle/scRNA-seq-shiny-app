@@ -10,6 +10,7 @@ tabPanel("Feature Plots",
       selectInput("select_gene2",
                   label="RNA-Seq Gene Name",
                   choices = rownames(pbmc),
+                  selected = "LYZ",
                   multiple = FALSE
         ) %>% 
         shinyInput_label_embed(
@@ -22,7 +23,7 @@ tabPanel("Feature Plots",
   
     # Main Panel
     mainPanel(
-      plotOutput('featureplot1'),
+      plotlyOutput('featureplot1'),
       width = main_width
     )
   
