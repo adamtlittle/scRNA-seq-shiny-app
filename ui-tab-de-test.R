@@ -17,7 +17,9 @@ tabPanel("DE Tests",
         shinyInput_label_embed(
           shiny_iconlink() %>%
           bs_embed_popover(
-            title = "Letter", content = "Choose a favorite", placement = "left"
+            title = "First Cell Type", 
+            content = "Expression Level shown in output under 'pct.1'", 
+            placement = "left"
           )
         ), # end selectInput
       selectInput("cell_type_2",
@@ -29,18 +31,24 @@ tabPanel("DE Tests",
         shinyInput_label_embed(
           shiny_iconlink() %>%
             bs_embed_popover(
-              title = "Letter", content = "Choose a favorite", placement = "left"
+              title = "Second Cell Type", 
+              content = "Expression Level shown in output under 'pct.2'", 
+              placement = "left"
             )
         ), # end selectInput
       selectInput("test_type",
-                  label="Select Test Type, default is Wilcox",
+                  label="Choose Statistical Test",
                   choices = list('wilcox', 'bimod', 'roc', 't', 'poisson', 'negbinom', 'LR', 'MAST', 'DESeq2'),
                   multiple = FALSE
         ) %>% 
         shinyInput_label_embed(
           shiny_iconlink() %>%
             bs_embed_popover(
-              title = "Letter", content = "Choose a favorite", placement = "left"
+              title = "Statistical Test", 
+              content = "Non-parameteric Wilcoxon rank sum test is the default 
+                         test, both more are available. Changes the order of genes
+                          ranked by p-value.", 
+              placement = "left"
             )
         ), # end selectInput
       numericInput("n_select",
@@ -52,19 +60,26 @@ tabPanel("DE Tests",
         shinyInput_label_embed(
           shiny_iconlink() %>%
             bs_embed_popover(
-              title = "Letter", content = "Choose a favorite", placement = "left"
+              title = "Gene Output", 
+              content = "Select the number of genes to output.", 
+              placement = "left"
             )
         ), # end selectInput
       
       selectInput("select_gene",
-                  label="RNA-Seq Gene Name (Select 1 or more) (optional)",
+                  label="Select Multiple Genes (optional)",
                   choices = rownames(pbmc),
                   multiple = TRUE
       ) %>% 
         shinyInput_label_embed(
           shiny_iconlink() %>%
             bs_embed_popover(
-              title = "Letter", content = "Choose a favorite", placement = "left"
+              title = "Gene Selector", 
+              content = "Please use this feature with caution. Many genes do not
+              have high enough expression levels to pass minimum requirement for 
+              average logFC cacluation. Genes not meeting minimum requirements 
+              will not output to the screen.", 
+              placement = "left"
             )
         ), # end selectInput
       downloadButton("downloadData", "Download")

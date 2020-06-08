@@ -2,7 +2,7 @@ source("helpers.R")
 # User Interface
 pbmc <- readRDS('pbmc.rds')
 features <- c("LYZ", "CCL5", "IL32", "PTPRCAP", "FCGR3A", "PF4")
-main_width <- 7
+main_width <- 6
 
 ## =========================================================================== ##
 ## User Interface
@@ -10,7 +10,7 @@ main_width <- 7
 
 ui <- fluidPage(
   navbarPage(
-    title="scRNA-seq",
+    title="STRAVA",
     theme=shinytheme("cerulean"),
     ## =========================================================================== ##
     ## Homepage
@@ -34,6 +34,7 @@ ui <- fluidPage(
 ## =========================================================================== ##
 
 server <- function(input, output, session){
+  source("server-index.R",local=TRUE)
   source("server-de-test.R",local=TRUE)
   source("server-fixed-data.R",local = TRUE)
   source("server-clustering.R",local=TRUE)

@@ -8,7 +8,7 @@ tabPanel("Ridge Plots",
    # Left Side Panel
     sidebarPanel(
       selectInput("select_gene_ridge",
-                  label="RNA-Seq Gene Name",
+                  label="Gene Selection",
                   choices = rownames(pbmc),
                   multiple = FALSE,
                   selected="LYZ",
@@ -16,7 +16,10 @@ tabPanel("Ridge Plots",
         shinyInput_label_embed(
           shiny_iconlink() %>%
             bs_embed_popover(
-              title = "Letter", content = "Choose a favorite", placement = "left"
+              title = "Gene Selection", 
+              content = "Please select the gene from 
+              the data you would like to visualize. ", 
+              placement = "left"
             )
         ), # end selectInput
     ),

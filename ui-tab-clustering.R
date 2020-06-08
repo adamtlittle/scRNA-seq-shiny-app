@@ -8,7 +8,7 @@ tabPanel("Feature Plots",
    # Left Side Panel
     sidebarPanel(
       selectInput("select_gene2",
-                  label="RNA-Seq Gene Name",
+                  label="Gene Selection",
                   choices = rownames(pbmc),
                   selected = "LYZ",
                   multiple = FALSE
@@ -16,7 +16,12 @@ tabPanel("Feature Plots",
         shinyInput_label_embed(
           shiny_iconlink() %>%
             bs_embed_popover(
-              title = "Letter", content = "Choose a favorite", placement = "left"
+              title = "Gene Selection", 
+              content = "Please select the gene from 
+              the data you would like to visualize. 
+              Refer to the dimension plot 
+              to map highlighted areas to cell type clusters.", 
+              placement = "left"
             )
         ), # end selectInput
     ),

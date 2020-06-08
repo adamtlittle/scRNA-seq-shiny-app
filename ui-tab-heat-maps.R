@@ -8,7 +8,7 @@ tabPanel("Heat Maps",
    # Left Side Panel
     sidebarPanel(
       selectInput("select_gene3",
-                  label="RNA-Seq Gene Name",
+                  label="Multiple Gene Selection",
                   choices = rownames(pbmc),
                   multiple = TRUE,
                   selected = features
@@ -16,7 +16,10 @@ tabPanel("Heat Maps",
         shinyInput_label_embed(
           shiny_iconlink() %>%
             bs_embed_popover(
-              title = "Letter", content = "Choose a favorite", placement = "left"
+              title = "Multiple Gene Selection", 
+              content = "Please select genes from the data you would like to 
+              concurrently visualize.", 
+              placement = "left"
             )
         ), # end selectInput
     ),

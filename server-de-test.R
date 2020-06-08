@@ -26,6 +26,12 @@
       paste("pbmc-", Sys.Date(), ".csv", sep="")
     },
     content = function(file) {
-      write.csv(data, file)
+      write.csv(FindMarkers(pbmc, 
+                            ident.1 = input$cell_type_1, 
+                            ident.2 = input$cell_type_2, 
+                            features = input$select_gene,
+                            test.use = input$test_type,
+                            verbose=TRUE
+      )[1:input$n_select,], file)
     }
   )

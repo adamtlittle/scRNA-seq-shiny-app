@@ -1,18 +1,36 @@
 tabPanel("Home Page",
          
-  titlePanel("Table of Contents"),
+  titlePanel("sc-RNA Visualization with STRAVA"),
          
   # Organize Components into Panels
   sidebarLayout(
            
   # Left Side Panel
-  sidebarPanel(),
+  sidebarPanel(
+    tags$p("Ideally, we would like the user to be able to upload their own 
+           processed data sets, but this is outside of the scope of this project."),
+           
+    tags$p("This app will eventually accept .rds files pre-processed with Seurat."),
+    
+    #fileInput('file', 'Choose .rds file to upload',
+              #accept = '.rds',
+              #)
+  ),
            
   # Main Panel
   mainPanel(
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat maximus massa, eu suscipit dui tempus at. Donec vitae fermentum est. Nunc sed sapien a arcu mollis tincidunt. Mauris pellentesque felis et ultrices lobortis. Proin egestas elementum urna, quis pharetra quam auctor sit amet. Cras vel ultrices nibh. Etiam vehicula libero in lacus aliquet facilisis. Mauris vitae pellentesque libero, eget tempor tellus. Ut suscipit tempor mauris, suscipit suscipit leo scelerisque non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. ",
-    width = 4
+    tags$p("STRAVA stands for 'Single-cell Transcriptomics RNA Analytical Visualization Application.'"),
+    
+    tags$p("The purpose of this app is to allow researchers to identify and interpret points 
+    of heterogeneity from single-cell transcriptomic measurements through differential 
+    expression testing and multiple visualizations."),
+    
+    tags$p("All data pre-processing, analysis, differential expression testing, and 
+    visualization were done using the R package Seurat. The web app was developed using Shiny."),
+    
+    width = main_width
     )
            
  ) # end sidebarLayout
 ) # end tabpanel
+
